@@ -1,4 +1,8 @@
+import 'package:flutter_localizations/flutter_localizations.dart';
+
 import 'package:flutter/material.dart';
+import 'configurations/MarvelLocalizations.dart';
+import 'constants/langs.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,6 +21,13 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
+      supportedLocales: localeConfigurations,
+      localizationsDelegates: [
+        MarvelLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate
+      ],
     );
   }
 }
