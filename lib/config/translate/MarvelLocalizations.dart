@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:marvel_app/constants/langs.dart';
-import 'package:yaml/yaml.dart';
+
+
+part of 'translate_config.dart';
+
 
 class MarvelLocalizations {
   final String localeName;
@@ -9,7 +9,7 @@ class MarvelLocalizations {
   MarvelLocalizations(this.localeName);
 
   static const LocalizationsDelegate<MarvelLocalizations> delegate =
-      _DiskoverLocalizationsDelegate();
+      _MarvelLocalizationsDelegate();
 
   YamlMap translations;
 
@@ -40,9 +40,9 @@ class MarvelLocalizations {
   }
 }
 
-class _DiskoverLocalizationsDelegate
+class _MarvelLocalizationsDelegate
     extends LocalizationsDelegate<MarvelLocalizations> {
-  const _DiskoverLocalizationsDelegate();
+  const _MarvelLocalizationsDelegate();
 
   @override
   bool isSupported(Locale locale) {
