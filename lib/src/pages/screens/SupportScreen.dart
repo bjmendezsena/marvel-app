@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:marvel_app/config/translate/translate_config.dart';
+
+import 'package:flutter/material.dart';
 
 class SupportScreen extends StatefulWidget {
   SupportScreen();

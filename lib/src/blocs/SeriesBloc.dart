@@ -21,4 +21,4 @@ class SeriesBloc {
   }
 }
 
-final bloc = SeriesBloc();
+final seriesBloc = SeriesBloc();
