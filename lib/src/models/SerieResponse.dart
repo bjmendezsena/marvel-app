@@ -4,6 +4,8 @@
 
 import 'dart:convert';
 
+import 'package:marvel_app/src/models/Thumbnail.dart';
+
 SerieResponse serieResponseFromJson(String str) => SerieResponse.fromJson(json.decode(str));
 
 String serieResponseToJson(SerieResponse data) => json.encode(data.toJson());
@@ -323,25 +325,7 @@ final typeValues = EnumValues({
     "interiorStory": Type.INTERIOR_STORY
 });
 
-class Thumbnail {
-    Thumbnail({
-        this.path,
-        this.extension,
-    });
 
-    String path;
-    String extension;
-
-    factory Thumbnail.fromJson(Map<String, dynamic> json) => Thumbnail(
-        path: json["path"],
-        extension: json["extension"],
-    );
-
-    Map<String, dynamic> toJson() => {
-        "path": path,
-        "extension": extension,
-    };
-}
 
 class Url {
     Url({

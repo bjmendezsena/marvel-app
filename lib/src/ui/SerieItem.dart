@@ -11,7 +11,7 @@ class SerieItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final portrait = 'portrait_uncanny';
+    final urlImage = getImagePath(this.serie.thumbnail);
     return GestureDetector(
       onTap: () {
         Navigator.of(context).push(MaterialPageRoute(
@@ -21,13 +21,12 @@ class SerieItem extends StatelessWidget {
         physics: NeverScrollableScrollPhysics(),
         children: [
           Container(
-            height: 150,
+            height: 100,
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
             child: FittedBox(
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(50),
-                child: Image.network(
-                  '${this.serie.thumbnail.path}/${portrait}.${this.serie.thumbnail.extension}',
+                child: Image.network(urlImage,
                   loadingBuilder: (context, child, progress) {
                     return progress == null
                         ? child
@@ -38,7 +37,13 @@ class SerieItem extends StatelessWidget {
             ),
           ),
           SizedBox(height: 10),
-          Text(this.serie.title, style: Theme.of(context).textTheme.bodyText1),
+          RichText(
+            textAlign: TextAlign.center,
+            text: TextSpan(
+              text: this.serie.title,
+              style: Theme.of(context).textTheme.bodyText1
+            ),
+          ),
         ],
       ),
     );

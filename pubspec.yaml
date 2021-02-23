@@ -23,7 +23,7 @@ dependencies:
   flutter_cupertino_localizations: ^1.0.1
 
 
-  cupertino_icons: ^1.0.2
+  cupertino_icons: ^0.1.2
   hidden_drawer_menu: ^2.0.1
 
 dev_dependencies:
@@ -41,5 +41,27 @@ flutter:
   assets:
     - lang/
     - assets/images/
+  fonts:
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/Montserrat-Black.ttf
+        - asset: assets/fonts/Montserrat-BlackItalic.ttf
+        - asset: assets/fonts/Montserrat-Bold.ttf
+        - asset: assets/fonts/Montserrat-BoldItalic.ttf
+        - asset: assets/fonts/Montserrat-ExtraBold.ttf
+        - asset: assets/fonts/Montserrat-ExtraBoldItalic.ttf
+        - asset: assets/fonts/Montserrat-ExtraLight.ttf
+        - asset: assets/fonts/Montserrat-ExtraLightItalic.ttf
+        - asset: assets/fonts/Montserrat-Italic.ttf
+        - asset: assets/fonts/Montserrat-Light.ttf
+        - asset: assets/fonts/Montserrat-LightItalic.ttf
+        - asset: assets/fonts/Montserrat-Medium.ttf
+        - asset: assets/fonts/Montserrat-MediumItalic.ttf
+        - asset: assets/fonts/Montserrat-Regular.ttf
+        - asset: assets/fonts/Montserrat-SemiBold.ttf
+        - asset: assets/fonts/Montserrat-SemiBoldItalic.ttf
+        - asset: assets/fonts/Montserrat-Thin.ttf
+        - asset: assets/fonts/Montserrat-ThinItalic.ttf
+    
 
 

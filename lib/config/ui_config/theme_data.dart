@@ -4,11 +4,12 @@ ThemeData getThemeData() {
   return ThemeData(
     textTheme: TextTheme(
         bodyText1: TextStyle(
-            fontFamily: 'Circular Std',
+            fontFamily: 'Montserrat',
             fontWeight: FontWeight.bold,
+            color: Colors.white,
             fontSize: 18),
         bodyText2: TextStyle(
-            fontFamily: 'Circular Std',
+            fontFamily: 'Montserrat',
             fontWeight: FontWeight.bold,
             color: Colors.white,
             fontSize: 25)),

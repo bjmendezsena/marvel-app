@@ -14,10 +14,13 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   ScrollController _controller;
+  List<Serie> list = [];
 
   _scrollListener() {
     if (_controller.offset >= _controller.position.maxScrollExtent &&
-        !_controller.position.outOfRange) {}
+        !_controller.position.outOfRange) {
+      seriesBloc.getAllSeries();
+    }
   }
 
   @override
@@ -34,8 +37,9 @@ class _HomeScreenState extends State<HomeScreen> {
         stream: seriesBloc.seriesStream,
         builder: (context, snapshot) {
           if (snapshot.hasData) {
+            list = [...list, ...snapshot.data];
             return SeriesList(
-              serieList: snapshot.data,
+              serieList: list,
               controller: _controller,
             );
           } else if (snapshot.hasError) {

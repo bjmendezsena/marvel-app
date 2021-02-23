@@ -12,17 +12,15 @@ class SeriesList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(20.0),
+      padding: EdgeInsets.symmetric(horizontal: 10),
       child: Column(children: [
         Expanded(
             child: GridView.builder(
                 controller: this.controller,
                 itemCount: this.serieList.length,
                 scrollDirection: Axis.vertical,
-                gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-                    maxCrossAxisExtent: 200.0,
-                    mainAxisExtent: 225.0,
-                    crossAxisSpacing: 30,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
                     mainAxisSpacing: 60),
                 itemBuilder: (BuildContext context, int index) {
                   return SerieItem(serie: this.serieList[index]);
